@@ -373,14 +373,14 @@ body {
 
 .animation-container {
     position: relative;
-    height: 250px;
-    width: 320px;
+    height: 350px;
+    width: 420px;
     margin: 0 auto;
 }
 
 .photo {
-    width: 150px;
-    height: 250px;
+    width: 220px;
+    height: 350px;
     position: absolute;
     top: 0;
     transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -396,11 +396,11 @@ body {
 }
 
 .photo-groom {
-    left: -50px;
+    left: -70px;
 }
 
 .photo-bride {
-    right: -50px;
+    right: -70px;
 }
 
 .btn-wrap {
@@ -448,11 +448,11 @@ body {
 
 /* Animation State */
 .animation-container.animate .photo-groom {
-    left: 10px;
+    left: 45px; /* Overlap by 45px so hands touch */
 }
 
 .animation-container.animate .photo-bride {
-    right: 10px;
+    right: 45px; /* Overlap by 45px so hands touch */
 }
 
 .animation-container.animate .btn-wrap {
@@ -460,10 +460,12 @@ body {
     pointer-events: none;
 }
 
-@media (max-width: 400px) {
-    .animation-container { width: 300px; height: 200px; }
-    .photo { width: 140px; height: 200px; }
-    .photo-groom { left: -30px; }
-    .photo-bride { right: -30px; }
-    .welcome-title { font-size: 3em; }
+@media (max-width: 500px) {
+    .animation-container { width: 340px; height: 280px; }
+    .photo { width: 180px; height: 280px; }
+    .photo-groom { left: -40px; }
+    .photo-bride { right: -40px; }
+    .animation-container.animate .photo-groom { left: 35px; }
+    .animation-container.animate .photo-bride { right: 35px; }
+    .welcome-title { font-size: 2.8em; }
 }
