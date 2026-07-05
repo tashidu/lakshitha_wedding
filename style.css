@@ -392,6 +392,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    mix-blend-mode: darken;
 }
 
 .photo-groom {
@@ -407,31 +408,42 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 10;
     transition: opacity 0.5s ease;
 }
 
 .open-btn {
-    padding: 15px 30px;
-    background-color: #7650a2;
-    color: white;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 30px;
+    padding: 12px 30px;
+    background: #fff;
+    color: #ff4b72;
+    font-size: 1.5em;
+    border: 2px solid #ff4b72;
+    border-radius: 40px;
     cursor: pointer;
-    font-family: 'Arvo', serif;
-    box-shadow: 0 4px 15px rgba(118, 80, 162, 0.4);
-    font-weight: bold;
-    transition: background 0.3s, transform 0.1s;
-    white-space: nowrap;
+    font-family: 'Dancing Script', cursive;
+    box-shadow: 0 8px 20px rgba(255, 75, 114, 0.2);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .open-btn:hover {
-    background-color: #5d3f82;
+    background: #ff4b72;
+    color: #fff;
 }
 
-.open-btn:active {
-    transform: scale(0.98);
+.heart-icon {
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.3); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.3); }
+    60% { transform: scale(1); }
+    100% { transform: scale(1); }
 }
 
 /* Animation State */
@@ -447,6 +459,7 @@ body {
 
 .animation-container.animate .btn-wrap {
     opacity: 0;
+    pointer-events: none;
 }
 
 @media (max-width: 400px) {
