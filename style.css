@@ -386,13 +386,13 @@ body {
     transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
     background: transparent;
+    mix-blend-mode: darken;
 }
 
 .photo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    mix-blend-mode: darken; /* This makes the white background of the images completely transparent! */
 }
 
 .photo-groom {
