@@ -373,31 +373,33 @@ body {
 
 .animation-container {
     position: relative;
-    height: 300px;
-    width: 350px;
+    height: 150px;
+    width: 320px;
     margin: 0 auto;
 }
 
 .photo {
-    width: 175px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     position: absolute;
     top: 0;
     transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
-    background-image: url('couple.png');
-    background-size: 350px 300px;
-    background-repeat: no-repeat;
+    background: transparent;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .photo-groom {
-    left: -80px;
-    background-position: left center;
+    left: -40px;
 }
 
 .photo-bride {
-    right: -80px;
-    background-position: right center;
+    right: -40px;
 }
 
 .btn-wrap {
@@ -434,11 +436,13 @@ body {
 
 /* Animation State */
 .animation-container.animate .photo-groom {
-    left: 0;
+    left: 50%;
+    transform: translateX(-90%);
 }
 
 .animation-container.animate .photo-bride {
-    right: 0;
+    right: 50%;
+    transform: translateX(90%);
 }
 
 .animation-container.animate .btn-wrap {
@@ -446,9 +450,9 @@ body {
 }
 
 @media (max-width: 400px) {
-    .animation-container { width: 280px; height: 240px; }
-    .photo { width: 140px; height: 240px; background-size: 280px 240px; }
-    .photo-groom { left: -60px; }
-    .photo-bride { right: -60px; }
+    .animation-container { width: 280px; height: 120px; }
+    .photo { width: 120px; height: 120px; }
+    .photo-groom { left: -20px; }
+    .photo-bride { right: -20px; }
     .welcome-title { font-size: 3em; }
 }
