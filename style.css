@@ -336,14 +336,49 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    background: #fff;
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    overflow: hidden;
+}
+
+/* Floral Corners */
+.floral-corner {
+    position: absolute;
+    width: 300px; /* Large on desktop */
+    opacity: 0.8;
+    pointer-events: none; /* So they don't block clicks */
+    mix-blend-mode: multiply; /* Removes any white background from the generated image */
+    transition: opacity 1.5s ease;
+}
+
+.floral-corner.top-left {
+    top: -20px;
+    left: -20px;
+    transform: rotate(0deg);
+}
+
+.floral-corner.top-right {
+    top: -20px;
+    right: -20px;
+    transform: rotate(90deg);
+}
+
+.floral-corner.bottom-left {
+    bottom: -20px;
+    left: -20px;
+    transform: rotate(-90deg);
+}
+
+.floral-corner.bottom-right {
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(180deg);
 }
 
 .welcome-overlay.hidden {
@@ -469,4 +504,14 @@ body {
     .animation-container.animate .photo-groom { left: 5px; }
     .animation-container.animate .photo-bride { right: 5px; }
     .welcome-title { font-size: 2.8em; }
+    
+    /* Make floral corners much smaller on mobile, or hide some */
+    .floral-corner {
+        width: 150px;
+        opacity: 0.5; /* Lighter on mobile so it doesn't distract */
+    }
+    .floral-corner.top-left { top: -10px; left: -10px; }
+    .floral-corner.top-right { top: -10px; right: -10px; }
+    .floral-corner.bottom-left { bottom: -10px; left: -10px; }
+    .floral-corner.bottom-right { bottom: -10px; right: -10px; }
 }
