@@ -85,15 +85,24 @@ function toggleMusic() {
 
 musicPlayer.addEventListener('click', toggleMusic);
 
-// Autoplay attempt on first user interaction with the page
-document.body.addEventListener('click', function() {
+// Autoplay attempt on first user interaction with the page (Mobile & Desktop)
+function startMusic() {
     if (!isMusicPlaying) {
         weddingMusic.play().then(() => {
             musicIcon.classList.add('fa-spin');
             musicPlayer.classList.add('playing');
             isMusicPlaying = true;
         }).catch(err => {
-            console.log("Autoplay blocked. User needs to click the music button.");
+            console.log("Autoplay blocked. User needs to interact.");
         });
     }
-}, { once: true });
+    // Remove the event listeners after first trigger
+    document.body.removeEventListener('click', startMusic);
+    document.body.removeEventListener('touchstart', startMusic);
+    window.removeEventListener('keydown', startMusic);
+}
+
+// Add multiple event types to catch the first interaction
+document.body.addEventListener('click', startMusic, { once: true });
+document.body.addEventListener('touchstart', startMusic, { once: true });
+window.addEventListener('keydown', startMusic, { once: true });
