@@ -415,13 +415,13 @@ body {
 .open-btn {
     padding: 12px 30px;
     background: #fff;
-    color: #ff4b72;
+    color: #7650a2; /* Purple */
     font-size: 1.5em;
-    border: 2px solid #ff4b72;
+    border: 2px solid #7650a2;
     border-radius: 40px;
     cursor: pointer;
     font-family: 'Dancing Script', cursive;
-    box-shadow: 0 8px 20px rgba(255, 75, 114, 0.2);
+    box-shadow: 0 8px 20px rgba(118, 80, 162, 0.2);
     transition: all 0.3s;
     display: flex;
     align-items: center;
@@ -429,7 +429,7 @@ body {
 }
 
 .open-btn:hover {
-    background: #ff4b72;
+    background: #7650a2;
     color: #fff;
 }
 
