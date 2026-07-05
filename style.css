@@ -448,11 +448,11 @@ body {
 
 /* Animation State */
 .animation-container.animate .photo-groom {
-    left: 45px; /* Overlap by 45px so hands touch */
+    left: 0px; /* Reduced overlap so they just touch hands */
 }
 
 .animation-container.animate .photo-bride {
-    right: 45px; /* Overlap by 45px so hands touch */
+    right: 0px; /* Reduced overlap so they just touch hands */
 }
 
 .animation-container.animate .btn-wrap {
@@ -465,7 +465,7 @@ body {
     .photo { width: 180px; height: 280px; }
     .photo-groom { left: -40px; }
     .photo-bride { right: -40px; }
-    .animation-container.animate .photo-groom { left: 35px; }
-    .animation-container.animate .photo-bride { right: 35px; }
+    .animation-container.animate .photo-groom { left: 5px; }
+    .animation-container.animate .photo-bride { right: 5px; }
     .welcome-title { font-size: 2.8em; }
 }
