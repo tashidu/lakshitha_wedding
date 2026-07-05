@@ -330,3 +330,131 @@ body {
         padding: 25px 20px;
     }
 }
+
+/* Welcome Screen Overlay */
+.welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.welcome-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.welcome-content {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.welcome-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    color: #7650a2;
+    margin: 0;
+}
+
+.welcome-subtitle {
+    font-family: 'Arvo', serif;
+    color: #888;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+
+.animation-container {
+    position: relative;
+    height: 120px;
+    width: 320px;
+    margin: 0 auto;
+}
+
+.photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #7650a2;
+    position: absolute;
+    top: 0;
+    transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(118, 80, 162, 0.3);
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-groom {
+    left: 0;
+}
+
+.photo-bride {
+    right: 0;
+}
+
+.btn-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+.open-btn {
+    padding: 15px 30px;
+    background-color: #7650a2;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Arvo', serif;
+    box-shadow: 0 4px 15px rgba(118, 80, 162, 0.4);
+    font-weight: bold;
+    transition: background 0.3s, transform 0.1s;
+    white-space: nowrap;
+}
+
+.open-btn:hover {
+    background-color: #5d3f82;
+}
+
+.open-btn:active {
+    transform: scale(0.98);
+}
+
+/* Animation State */
+.animation-container.animate .photo-groom {
+    left: 50%;
+    transform: translateX(-80%);
+}
+
+.animation-container.animate .photo-bride {
+    right: 50%;
+    transform: translateX(80%);
+}
+
+.animation-container.animate .btn-wrap {
+    opacity: 0;
+}
+
+@media (max-width: 400px) {
+    .animation-container { width: 280px; height: 100px; }
+    .photo { width: 100px; height: 100px; }
+    .welcome-title { font-size: 3em; }
+}

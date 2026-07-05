@@ -85,24 +85,30 @@ function toggleMusic() {
 
 musicPlayer.addEventListener('click', toggleMusic);
 
-// Autoplay attempt on first user interaction with the page (Mobile & Desktop)
-function startMusic() {
-    if (!isMusicPlaying) {
-        weddingMusic.play().then(() => {
-            musicIcon.classList.add('fa-spin');
-            musicPlayer.classList.add('playing');
-            isMusicPlaying = true;
-        }).catch(err => {
-            console.log("Autoplay blocked. User needs to interact.");
-        });
-    }
-    // Remove the event listeners after first trigger
-    document.body.removeEventListener('click', startMusic);
-    document.body.removeEventListener('touchstart', startMusic);
-    window.removeEventListener('keydown', startMusic);
-}
+// Welcome Screen Animation & Autoplay Logic
+const openBtn = document.getElementById('openInvitationBtn');
+const overlay = document.getElementById('welcomeOverlay');
+const animContainer = document.getElementById('animationContainer');
 
-// Add multiple event types to catch the first interaction
-document.body.addEventListener('click', startMusic, { once: true });
-document.body.addEventListener('touchstart', startMusic, { once: true });
-window.addEventListener('keydown', startMusic, { once: true });
+if (openBtn) {
+    openBtn.addEventListener('click', function() {
+        // 1. Trigger the photo animation
+        animContainer.classList.add('animate');
+        
+        // 2. Play the background music
+        if (!isMusicPlaying) {
+            weddingMusic.play().then(() => {
+                musicIcon.classList.add('fa-spin');
+                musicPlayer.classList.add('playing');
+                isMusicPlaying = true;
+            }).catch(err => {
+                console.log("Autoplay blocked. User needs to interact.");
+            });
+        }
+
+        // 3. Fade out the overlay after animation completes (1.5s)
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+        }, 1800); // 1.8 seconds delay to let animation finish before hiding screen
+    });
+}
