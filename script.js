@@ -50,7 +50,7 @@ function submitRSVP(event) {
         }
     })
     .then(response => {
-        alert('Thank you! 🎉 Your RSVP has been saved to the Google Sheet.');
+        alert('Thank you! 🎉 See you soon at the wedding!');
         form.reset();
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
