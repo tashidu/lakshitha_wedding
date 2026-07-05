@@ -13,8 +13,11 @@
     <!-- Sakura CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.css" />
     
+    <!-- AOS CSS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=13">
+    <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
     <!-- Welcome Screen Overlay -->
@@ -46,7 +49,7 @@
     <img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
     <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
     
-    <div class="wrap">
+    <div class="wrap" data-aos="fade-up" data-aos-duration="1500">
         <div class="title">
             <h1 id="groomName">Lakshitha</h1>
             <h2 class="ampersand">&amp;</h2>
@@ -59,17 +62,17 @@
         </div>
     </div>
     
-    <div id="time"></div>
+    <div id="time" data-aos="zoom-in" data-aos-duration="1500"></div>
     
-    <p class="quote">
+    <p class="quote" data-aos="fade-up" data-aos-duration="1500">
        "Two souls, one heart."
     </p>
-    <p class="dance-med">
+    <p class="dance-med" data-aos="fade-up" data-aos-duration="1500">
        lunch & dancing to follow
     </p>
 
     <!-- RSVP Section -->
-    <div class="rsvp-section">
+    <div class="rsvp-section" data-aos="fade-up" data-aos-duration="1500">
         <h2>RSVP</h2>
         <p>Please confirm your presence to celebrate with us!</p>
         <form id="rsvpForm" onsubmit="submitRSVP(event)">
@@ -85,7 +88,7 @@
     </div>
 
     <!-- Location Section -->
-    <div class="location-section">
+    <div class="location-section" data-aos="fade-up" data-aos-duration="1500">
         <div class="location-header">
             <h2>HOW DO I GET THERE?</h2>
             <p>It's way easier than you think!</p>
@@ -109,7 +112,7 @@
                     </div>
                     <div class="card-col" style="text-align: right;">
                         <h4>CONTACT US</h4>
-                        <p><i class="fa fa-phone"></i> [Phone 1]<br><i class="fa fa-phone"></i> [Phone 2]</p>
+                        <p><i class="fa fa-phone"></i> 077 5285373<br><i class="fa fa-phone"></i> 071 7385373</p>
                     </div>
                 </div>
                 <div class="card-buttons">
@@ -130,6 +133,10 @@
     <!-- Scripts -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>
