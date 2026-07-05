@@ -386,15 +386,13 @@ body {
     transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
     background: transparent;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    mix-blend-mode: darken; /* This makes the white background of the images completely transparent! */
 }
 
 .photo-groom {
