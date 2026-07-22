@@ -119,10 +119,11 @@ body {
 }
 
 .title {
-    padding: 60px;
+    padding: 60px 20px;
     transform-style: preserve-3d;
     position: relative;
     text-align: center;
+    width: 90%;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -135,7 +136,7 @@ body {
 
 .title h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 5em;
+    font-size: clamp(3rem, 10vw, 6rem);
     margin: 10px 0;
     color: #7650a2; /* Purple tone */
     animation: romanticGlow 4s ease-in-out infinite alternate;
@@ -148,27 +149,27 @@ body {
 
 .title h2 {
     font-family: 'Arvo', serif;
-    font-size: 2em;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin: 0;
     color: #888;
 }
 
 .ampersand {
     font-family: 'Dancing Script', cursive;
-    font-size: 2em;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin: 0;
     color: #e74c3c;
 }
 
 .quote {
     font-family: 'Dancing Script', cursive;
-    font-size: 2.5em;
+    font-size: clamp(1.8rem, 6vw, 3rem);
     color: #7650a2;
     margin: 10px 0;
 }
 
 .title h3 {
-    font-size: 1.5em;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
     font-weight: normal;
     margin-top: 20px;
     text-transform: uppercase;
@@ -177,7 +178,7 @@ body {
 }
 
 .title p {
-    font-size: 1.2em;
+    font-size: clamp(1rem, 3vw, 1.4rem);
     line-height: 1.8;
 }
 
@@ -187,7 +188,7 @@ body {
 }
 
 #time {
-    font-size: 2em;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     font-weight: bold;
     margin: 30px 0;
     color: #333;
@@ -196,13 +197,14 @@ body {
 
 .dance-med {
     font-style: italic;
-    font-size: 1.2em;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     color: #777;
     margin-bottom: 50px;
 }
 
 /* RSVP Section */
 .rsvp-section {
+    width: 90%;
     max-width: 600px;
     margin: 30px auto 60px;
     padding: 40px 30px;
@@ -224,7 +226,7 @@ body {
 
 .rsvp-section h2 {
     font-family: 'Dancing Script', cursive;
-    font-size: 3.5em;
+    font-size: clamp(2.5rem, 8vw, 4rem);
     color: #7650a2;
     margin-top: 0;
     margin-bottom: 5px;
@@ -317,7 +319,7 @@ body {
 }
 
 .location-header h2 {
-    font-size: 2em;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     color: #4a4a4a;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -428,7 +430,7 @@ body {
     color: white;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments (Significantly reduced due to fluid CSS clamp) */
 @media (max-width: 768px) {
     .card-columns {
         flex-direction: column;
@@ -459,9 +461,6 @@ body {
     .title {
         padding: 40px 20px;
     }
-    .title h1 { font-size: 3em; }
-    .title h3 { font-size: 1.2em; }
-    #time { font-size: 1.5em; }
     .rsvp-section {
         margin: 20px;
         padding: 25px 20px;
@@ -525,13 +524,13 @@ body {
 
 .welcome-content {
     text-align: center;
-    width: 100%;
+    width: 90%;
     max-width: 800px;
 }
 
 .welcome-title {
     font-family: 'Dancing Script', cursive;
-    font-size: 4em;
+    font-size: clamp(2.5rem, 8vw, 5rem);
     color: #7650a2;
     margin: 0;
 }
@@ -540,13 +539,14 @@ body {
     font-family: 'Arvo', serif;
     color: #888;
     margin-bottom: 50px;
-    font-size: 1.2em;
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .animation-container {
     position: relative;
     height: 350px;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
     margin: 0 auto;
     transform-style: preserve-3d;
 }
@@ -649,8 +649,6 @@ body {
     .photo-bride { right: -20px; }
     .animation-container.animate .photo-groom { left: 10px; }
     .animation-container.animate .photo-bride { right: 10px; }
-    .welcome-title { font-size: 2.5em; }
-    .title h1 { font-size: 2.5em; }
     
     /* Make floral corners much smaller on mobile, or hide some */
     .floral-corner {
