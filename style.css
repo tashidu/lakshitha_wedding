@@ -214,6 +214,8 @@ body {
 }
 
 .rsvp-section input, .rsvp-section select {
+    width: 100%;
+    box-sizing: border-box;
     padding: 15px;
     font-size: 1em;
     border: 1px solid #ddd;
@@ -403,7 +405,7 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .card-columns {
         flex-direction: column;
         text-align: center;
@@ -416,16 +418,24 @@ body {
         flex-direction: column;
     }
     .location-card {
-        width: 90%;
+        width: 100%;
+        box-sizing: border-box;
         padding: 20px;
+    }
+    .location-card-wrapper {
+        width: 95%;
+        bottom: -20px;
+    }
+    .map-container {
+        height: 350px;
     }
     .top-left-decoration, .top-right-decoration {
         width: 150px;
     }
     .title {
-        padding: 20px;
+        padding: 40px 20px;
     }
-    .title h1 { font-size: 3.5em; }
+    .title h1 { font-size: 3em; }
     .title h3 { font-size: 1.2em; }
     #time { font-size: 1.5em; }
     .rsvp-section {
@@ -602,13 +612,21 @@ body {
 }
 
 @media (max-width: 500px) {
-    .animation-container { width: 340px; height: 280px; }
-    .photo { width: 180px; height: 280px; }
-    .photo-groom { left: -40px; }
-    .photo-bride { right: -40px; }
-    .animation-container.animate .photo-groom { left: 5px; }
-    .animation-container.animate .photo-bride { right: 5px; }
-    .welcome-title { font-size: 2.8em; }
+    .animation-container { 
+        width: 100%; 
+        max-width: 320px;
+        height: 250px; 
+    }
+    .photo { 
+        width: 150px; 
+        height: 250px; 
+    }
+    .photo-groom { left: -20px; }
+    .photo-bride { right: -20px; }
+    .animation-container.animate .photo-groom { left: 10px; }
+    .animation-container.animate .photo-bride { right: 10px; }
+    .welcome-title { font-size: 2.5em; }
+    .title h1 { font-size: 2.5em; }
     
     /* Make floral corners much smaller on mobile, or hide some */
     .floral-corner {
