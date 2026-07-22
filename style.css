@@ -99,14 +99,38 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 40px 60px;
+    padding: 60px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     transform-style: preserve-3d;
+    position: relative;
+}
+
+.bg-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140%;
+    height: 140%;
+    z-index: 0;
+    fill: none;
+    stroke: rgba(118, 80, 162, 0.6);
+    stroke-width: 1.5;
+    animation: heartPulseLine 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes heartPulseLine {
+    0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.2; stroke-width: 1; }
+    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; stroke-width: 2; }
+    100% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.2; stroke-width: 1; }
 }
 
 .title > * {
     transform: translateZ(40px);
+    position: relative;
+    z-index: 2;
 }
 
 .title h1 {
