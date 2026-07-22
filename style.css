@@ -623,11 +623,11 @@ body {
 
 /* Animation State */
 .animation-container.animate .photo-groom {
-    left: 0px; /* Reduced overlap so they just touch hands */
+    left: 45px; /* Bring them closer together */
 }
 
 .animation-container.animate .photo-bride {
-    right: 0px; /* Reduced overlap so they just touch hands */
+    right: 45px; /* Bring them closer together */
 }
 
 .animation-container.animate .btn-wrap {
@@ -647,8 +647,8 @@ body {
     }
     .photo-groom { left: -20px; }
     .photo-bride { right: -20px; }
-    .animation-container.animate .photo-groom { left: 10px; }
-    .animation-container.animate .photo-bride { right: 10px; }
+    .animation-container.animate .photo-groom { left: 25px; }
+    .animation-container.animate .photo-bride { right: 25px; }
     
     /* Make floral corners much smaller on mobile, or hide some */
     .floral-corner {
