@@ -1,11 +1,69 @@
 body {
     margin: 0;
     padding: 0;
-    background: #ffffff;
     font-family: 'Arvo', serif;
-    color: #555;
-    text-align: center;
+    background: linear-gradient(-45deg, #f0e6f2, #ffffff, #e6e6fa, #fdfbfb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
     overflow-x: hidden;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.heart-loader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: heartBeatLoader 1.5s infinite;
+}
+
+.heart-loader .fa-heart {
+    font-size: 80px;
+    color: #7650a2;
+    opacity: 0.2;
+}
+
+.heart-loader span {
+    position: absolute;
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #7650a2;
+    font-weight: bold;
+}
+
+@keyframes heartBeatLoader {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.15); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); }
+    60% { transform: scale(1); }
 }
 
 .top-left-decoration {
@@ -103,13 +161,15 @@ body {
     max-width: 600px;
     margin: 30px auto 60px;
     padding: 40px 30px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.65); /* Glassmorphism */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
     z-index: 10;
-    border: 1px solid #f0e6f2;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     transform-style: preserve-3d;
 }
 
@@ -155,12 +215,13 @@ body {
     border-radius: 30px; /* Pill shape */
     cursor: pointer;
     font-family: 'Arvo', serif;
-    transition: background 0.3s, transform 0.1s;
+    transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
     font-weight: bold;
 }
 
 .rsvp-section button:hover {
     background-color: #5d3f82;
+    box-shadow: 0 0 15px rgba(118, 80, 162, 0.6); /* Glow effect */
 }
 
 .rsvp-section button:active {
@@ -247,7 +308,10 @@ body {
 }
 
 .location-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.8); /* Glassmorphism */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 25px 40px;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);

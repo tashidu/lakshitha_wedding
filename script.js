@@ -1,4 +1,10 @@
 $(window).on('load', function () {
+    // Hide preloader when everything (including the large mp3) is fully loaded
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('hidden');
+    }
+    
     // Initialize falling sakura leaves
     $('body').sakura();
 });
