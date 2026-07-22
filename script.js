@@ -11,7 +11,7 @@ $(window).on('load', function () {
 
 // Set the date we're counting down to
 // UPDATE THIS TO THE ACTUAL WEDDING DATE
-var countDownDate = new Date("Sep 3, 2026 00:00:00").getTime(); 
+var countDownDate = new Date("Sep 5, 2026 00:00:00").getTime(); 
 
 // Update the count down every 1 second
 var countdownTimer = setInterval(function() {
