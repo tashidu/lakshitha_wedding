@@ -100,15 +100,21 @@ body {
 
 /* RSVP Section */
 .rsvp-section {
-    background: #fff;
-    max-width: 500px;
-    margin: 20px auto 60px auto;
+    max-width: 600px;
+    margin: 30px auto 60px;
     padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(118, 80, 162, 0.15); /* Purple shadow */
-    border: 1px solid #f0e6fa;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
     position: relative;
     z-index: 10;
+    border: 1px solid #f0e6f2;
+    transform-style: preserve-3d;
+}
+
+.rsvp-section h2, .rsvp-section p, .rsvp-section form {
+    transform: translateZ(30px);
 }
 
 .rsvp-section h2 {
@@ -230,18 +236,27 @@ body {
     filter: grayscale(20%);
 }
 
-.location-card {
-    position: relative;
-    z-index: 10;
-    background: rgba(255, 255, 255, 0.95);
+.location-card-wrapper {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 700px;
+    z-index: 2;
+}
+
+.location-card {
+    background: white;
+    padding: 25px 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+.location-card > div {
+    transform: translateZ(30px);
 }
 
 .card-columns {
@@ -411,6 +426,7 @@ body {
     height: 350px;
     width: 420px;
     margin: 0 auto;
+    transform-style: preserve-3d;
 }
 
 .photo {
@@ -422,6 +438,7 @@ body {
     z-index: 2;
     background: transparent;
     mix-blend-mode: darken;
+    transform: translateZ(40px);
 }
 
 .photo img {

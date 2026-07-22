@@ -31,7 +31,7 @@
         <div class="welcome-content">
             <h2 class="welcome-title">Lakshitha & Sandani</h2>
             <p class="welcome-subtitle">We invite you to celebrate with us</p>
-            <div class="animation-container" id="animationContainer">
+            <div class="animation-container" id="animationContainer" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
                 <div class="photo photo-groom">
                     <img src="groom.png" alt="Groom">
                 </div>
@@ -72,7 +72,7 @@
     </p>
 
     <!-- RSVP Section -->
-    <div class="rsvp-section" data-aos="fade-up" data-aos-duration="1500">
+    <div class="rsvp-section" data-aos="fade-up" data-aos-duration="1500" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1" data-tilt-perspective="1000">
         <h2>RSVP</h2>
         <p>Please confirm your presence to celebrate with us!</p>
         <form id="rsvpForm" onsubmit="submitRSVP(event)">
@@ -104,19 +104,21 @@
                 loading="lazy">
             </iframe>
             
-            <div class="location-card">
-                <div class="card-columns">
-                    <div class="card-col">
-                        <h4>WEDDING VENUE</h4>
-                        <p>Sooriya Resort and Spa<br>Beach, Rekawa Road<br>Tangalle 82135</p>
+            <div class="location-card-wrapper">
+                <div class="location-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1" data-tilt-perspective="1000">
+                    <div class="card-columns">
+                        <div class="card-col">
+                            <h4>WEDDING VENUE</h4>
+                            <p>Sooriya Resort and Spa<br>Beach, Rekawa Road<br>Tangalle 82135</p>
+                        </div>
+                        <div class="card-col" style="text-align: right;">
+                            <h4>CONTACT US</h4>
+                            <p><i class="fa fa-phone"></i> 077 5285373<br><i class="fa fa-phone"></i> 071 7385373</p>
+                        </div>
                     </div>
-                    <div class="card-col" style="text-align: right;">
-                        <h4>CONTACT US</h4>
-                        <p><i class="fa fa-phone"></i> 077 5285373<br><i class="fa fa-phone"></i> 071 7385373</p>
+                    <div class="card-buttons">
+                        <a href="https://share.google/T4hpfKAKH4F8DsCwN" target="_blank" class="btn-map"><i class="fa fa-map-marker"></i> SHOW MAP</a>
                     </div>
-                </div>
-                <div class="card-buttons">
-                    <a href="https://share.google/T4hpfKAKH4F8DsCwN" target="_blank" class="btn-map"><i class="fa fa-map-marker"></i> SHOW MAP</a>
                 </div>
             </div>
         </div>
@@ -134,6 +136,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script>
         AOS.init();
     </script>
