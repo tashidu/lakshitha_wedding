@@ -94,6 +94,21 @@ body {
     box-sizing: border-box;
 }
 
+.title {
+    background: rgba(255, 255, 255, 0.4); /* Glassmorphism */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transform-style: preserve-3d;
+}
+
+.title > * {
+    transform: translateZ(40px);
+}
+
 .title h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 5em;
@@ -400,6 +415,9 @@ body {
     }
     .top-left-decoration, .top-right-decoration {
         width: 150px;
+    }
+    .title {
+        padding: 20px;
     }
     .title h1 { font-size: 3.5em; }
     .title h3 { font-size: 1.2em; }
