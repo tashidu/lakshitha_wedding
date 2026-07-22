@@ -55,13 +55,7 @@
 
     <div class="sakura-falling"></div>
     <div class="light-rays"></div>
-    <!-- Magical Fireflies -->
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    <div class="firefly"></div>
-    
+
     <img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
     <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
     
@@ -93,7 +87,18 @@
         <p>Please confirm your presence to celebrate with us!</p>
         <form id="rsvpForm" onsubmit="submitRSVP(event)">
             <input type="text" id="guestName" name="guestName" placeholder="Your Name" required />
-            <input type="number" id="guestCount" name="guestCount" placeholder="Number of Guests" required min="1" max="10"/>
+            <select id="guestCount" name="guestCount" required>
+                <option value="" disabled selected>Number of Guests</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
             <select id="attendance" name="attendance" required>
                 <option value="" disabled selected>Will you attend?</option>
                 <option value="yes">Yes, I will be there happily!</option>
