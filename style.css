@@ -95,15 +95,11 @@ body {
 }
 
 .title {
-    background: rgba(255, 255, 255, 0.4); /* Glassmorphism */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 60px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    transform-style: preserve-3d;
     position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    transform-style: preserve-3d;
+    max-width: 600px;
 }
 
 .bg-heart {
@@ -111,20 +107,26 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 140%;
-    height: 140%;
+    width: 120%;
+    height: 120%;
     z-index: 0;
     fill: none;
-    stroke: rgba(118, 80, 162, 0.6);
+    stroke: #ff3b30; /* Red drawn line */
     stroke-width: 1.5;
-    animation: heartPulseLine 3s infinite;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawHeart 5s infinite;
     pointer-events: none;
+    overflow: visible;
 }
 
-@keyframes heartPulseLine {
-    0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.2; stroke-width: 1; }
-    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; stroke-width: 2; }
-    100% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.2; stroke-width: 1; }
+@keyframes drawHeart {
+    0% { stroke-dashoffset: 300; opacity: 0; }
+    20% { stroke-dashoffset: 0; opacity: 1; }
+    80% { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: 300; opacity: 0; }
 }
 
 .title > * {
