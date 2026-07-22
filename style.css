@@ -100,36 +100,37 @@ body {
     text-align: center;
     transform-style: preserve-3d;
     max-width: 600px;
+    margin: 0 auto;
 }
 
 .bg-heart {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120%;
-    height: 120%;
+    transform: translate(-50%, -50%) translateZ(10px);
+    width: 140%;
+    height: 140%;
     z-index: 0;
     fill: none;
     stroke: #ff3b30; /* Red drawn line */
     stroke-width: 1.5;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
-    animation: drawHeart 5s infinite;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawHeart 4s infinite alternate ease-in-out;
     pointer-events: none;
     overflow: visible;
 }
 
 @keyframes drawHeart {
-    0% { stroke-dashoffset: 300; opacity: 0; }
-    20% { stroke-dashoffset: 0; opacity: 1; }
-    80% { stroke-dashoffset: 0; opacity: 1; }
-    100% { stroke-dashoffset: 300; opacity: 0; }
+    0% { stroke-dashoffset: 400; opacity: 0.1; }
+    30% { stroke-dashoffset: 0; opacity: 1; }
+    70% { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: 400; opacity: 0.1; }
 }
 
-.title > * {
+.title > *:not(.bg-heart) {
     transform: translateZ(40px);
     position: relative;
     z-index: 2;
