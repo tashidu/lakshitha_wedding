@@ -18,6 +18,9 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css?v=15">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Preloader -->
@@ -36,18 +39,22 @@
         <img src="floral-corner.png" class="floral-corner bottom-left" alt="decoration">
         <img src="floral-corner.png" class="floral-corner bottom-right" alt="decoration">
         
-        <div class="welcome-content">
-            <h2 class="welcome-title">Lakshitha & Sandani</h2>
-            <p class="welcome-subtitle">We invite you to celebrate with us</p>
-            <div class="animation-container" id="animationContainer" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-                <div class="photo photo-groom">
-                    <img src="groom.png" alt="Groom">
-                </div>
-                <div class="btn-wrap">
-                    <button id="openInvitationBtn" class="open-btn"><i class="fa fa-heart heart-icon"></i> Open Invitation</button>
-                </div>
-                <div class="photo photo-bride">
-                    <img src="bride.png" alt="Bride">
+        <div class="welcome-content container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h2 class="welcome-title">Lakshitha & Sandani</h2>
+                    <p class="welcome-subtitle">We invite you to celebrate with us</p>
+                    <div class="animation-container mx-auto" id="animationContainer" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                        <div class="photo photo-groom">
+                            <img src="groom.png" alt="Groom" class="img-fluid">
+                        </div>
+                        <div class="btn-wrap">
+                            <button id="openInvitationBtn" class="open-btn"><i class="fa fa-heart heart-icon"></i> Open Invitation</button>
+                        </div>
+                        <div class="photo photo-bride">
+                            <img src="bride.png" alt="Bride" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,16 +66,20 @@
     <img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
     <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
     
-    <div class="wrap" data-aos="fade-up" data-aos-duration="1500">
-        <div class="title" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1" data-tilt-perspective="1000">
-            <h1 id="groomName">Lakshitha</h1>
-            <h2 class="ampersand">&amp;</h2>
-            <h1 id="brideName">Sandani</h1>
-            <h3>Are getting married</h3>
-            <p>
-               on <span class="date">05 September 2026</span><br>
-               At <span class="place">Sooriya Resort and Spa, Tangalle</span>                
-            </p>
+    <div class="wrap container" data-aos="fade-up" data-aos-duration="1500">
+        <div class="row justify-content-center w-100">
+            <div class="col-12 col-md-10">
+                <div class="title mx-auto" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1" data-tilt-perspective="1000">
+                    <h1 id="groomName">Lakshitha</h1>
+                    <h2 class="ampersand">&amp;</h2>
+                    <h1 id="brideName">Sandani</h1>
+                    <h3>Are getting married</h3>
+                    <p>
+                       on <span class="date">05 September 2026</span><br>
+                       At <span class="place">Sooriya Resort and Spa, Tangalle</span>                
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -82,30 +93,36 @@
     </p>
 
     <!-- RSVP Section -->
-    <div class="rsvp-section" data-aos="fade-up" data-aos-duration="1500" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1" data-tilt-perspective="1000">
-        <h2>RSVP</h2>
-        <p>Please confirm your presence to celebrate with us!</p>
-        <form id="rsvpForm" onsubmit="submitRSVP(event)">
-            <input type="text" id="guestName" name="guestName" placeholder="Your Name" required />
-            <select id="guestCount" name="guestCount" required>
-                <option value="" disabled selected>Number of Guests</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-            <select id="attendance" name="attendance" required>
-                <option value="" disabled selected>Will you attend?</option>
-                <option value="yes">Yes, I will be there happily!</option>
-                <option value="no">Sorry, I can't make it</option>
-            </select>
-            <button type="submit">Confirm RSVP</button>
-        </form>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="rsvp-section mx-auto" data-aos="fade-up" data-aos-duration="1500" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1" data-tilt-perspective="1000">
+                    <h2>RSVP</h2>
+                    <p>Please confirm your presence to celebrate with us!</p>
+                    <form id="rsvpForm" onsubmit="submitRSVP(event)">
+                        <input type="text" id="guestName" name="guestName" placeholder="Your Name" required class="form-control mb-3" />
+                        <select id="guestCount" name="guestCount" required class="form-select mb-3">
+                            <option value="" disabled selected>Number of Guests</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                        <select id="attendance" name="attendance" required class="form-select mb-4">
+                            <option value="" disabled selected>Will you attend?</option>
+                            <option value="yes">Yes, I will be there happily!</option>
+                            <option value="no">Sorry, I can't make it</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill rsvp-btn">Confirm RSVP</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Location Section -->
@@ -125,20 +142,24 @@
                 loading="lazy">
             </iframe>
             
-            <div class="location-card-wrapper">
-                <div class="location-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1" data-tilt-perspective="1000">
-                    <div class="card-columns">
-                        <div class="card-col">
-                            <h4>WEDDING VENUE</h4>
-                            <p>Sooriya Resort and Spa<br>Beach, Rekawa Road<br>Tangalle 82135</p>
+            <div class="location-card-wrapper container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8">
+                        <div class="location-card mx-auto" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1" data-tilt-perspective="1000">
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-6 mb-3 mb-md-0 text-center text-md-start">
+                                    <h4>WEDDING VENUE</h4>
+                                    <p>Sooriya Resort and Spa<br>Beach, Rekawa Road<br>Tangalle 82135</p>
+                                </div>
+                                <div class="col-12 col-md-6 text-center text-md-end">
+                                    <h4>CONTACT US</h4>
+                                    <p><i class="fa fa-phone"></i> 077 5285373<br><i class="fa fa-phone"></i> 071 7385373</p>
+                                </div>
+                            </div>
+                            <div class="card-buttons">
+                                <a href="https://share.google/T4hpfKAKH4F8DsCwN" target="_blank" class="btn-map"><i class="fa fa-map-marker"></i> SHOW MAP</a>
+                            </div>
                         </div>
-                        <div class="card-col" style="text-align: right;">
-                            <h4>CONTACT US</h4>
-                            <p><i class="fa fa-phone"></i> 077 5285373<br><i class="fa fa-phone"></i> 071 7385373</p>
-                        </div>
-                    </div>
-                    <div class="card-buttons">
-                        <a href="https://share.google/T4hpfKAKH4F8DsCwN" target="_blank" class="btn-map"><i class="fa fa-map-marker"></i> SHOW MAP</a>
                     </div>
                 </div>
             </div>

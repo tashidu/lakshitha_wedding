@@ -123,9 +123,6 @@ body {
     transform-style: preserve-3d;
     position: relative;
     text-align: center;
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .title > * {
@@ -204,9 +201,6 @@ body {
 
 /* RSVP Section */
 .rsvp-section {
-    width: 90%;
-    max-width: 600px;
-    margin: 30px auto 60px;
     padding: 40px 30px;
     background: rgba(255, 255, 255, 0.65); /* Glassmorphism */
     backdrop-filter: blur(12px);
@@ -349,10 +343,8 @@ body {
 .location-card-wrapper {
     position: absolute;
     bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 700px;
+    left: 0;
+    width: 100%;
     z-index: 2;
 }
 
@@ -443,13 +435,7 @@ body {
     .card-buttons {
         flex-direction: column;
     }
-    .location-card {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 20px;
-    }
     .location-card-wrapper {
-        width: 95%;
         bottom: -20px;
     }
     .map-container {
@@ -524,8 +510,6 @@ body {
 
 .welcome-content {
     text-align: center;
-    width: 90%;
-    max-width: 800px;
 }
 
 .welcome-title {
@@ -637,8 +621,6 @@ body {
 
 @media (max-width: 500px) {
     .animation-container { 
-        width: 100%; 
-        max-width: 320px;
         height: 250px; 
     }
     .photo { 
