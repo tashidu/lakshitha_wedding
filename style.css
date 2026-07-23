@@ -13,6 +13,17 @@ html, body {
     text-align: center;
 }
 
+.sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden !important;
+    pointer-events: none;
+    z-index: 9999;
+}
+
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -98,6 +109,7 @@ html, body {
     top: 0;
     left: 0;
     width: 300px;
+    max-width: 50%;
     z-index: 1;
 }
 
@@ -106,6 +118,7 @@ html, body {
     top: 0;
     right: 0;
     width: 300px;
+    max-width: 50%;
     z-index: 1;
 }
 

@@ -6,7 +6,7 @@ $(window).on('load', function () {
     }
     
     // Initialize falling sakura leaves
-    $('body').sakura();
+    $('.sakura-container').sakura();
 });
 
 // Set the date we're counting down to
