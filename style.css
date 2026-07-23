@@ -542,8 +542,8 @@ html, body {
     height: auto; /* Maintain aspect ratio */
     aspect-ratio: 220/350; /* Keep the original height proportion */
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateZ(40px); /* Center vertically and pop out */
+    top: 0;
+    transform: translateZ(40px);
     transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
     background: transparent;
@@ -610,11 +610,11 @@ html, body {
 
 /* Animation State */
 .animation-container.animate .photo-groom {
-    transform: translate(25%, -50%) translateZ(40px); /* Slide in */
+    left: 12%; /* Slide in responsive */
 }
 
 .animation-container.animate .photo-bride {
-    transform: translate(-25%, -50%) translateZ(40px); /* Slide in */
+    right: 12%; /* Slide in responsive */
 }
 
 .animation-container.animate .btn-wrap {
@@ -629,8 +629,8 @@ html, body {
     .photo { 
         width: 45%; 
     }
-    .animation-container.animate .photo-groom { transform: translate(15%, -50%) translateZ(40px); }
-    .animation-container.animate .photo-bride { transform: translate(-15%, -50%) translateZ(40px); }
+    .animation-container.animate .photo-groom { left: 8%; }
+    .animation-container.animate .photo-bride { right: 8%; }
     
     /* Make floral corners much smaller on mobile, or hide some */
     .floral-corner {
