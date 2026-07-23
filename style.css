@@ -1,4 +1,4 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-family: 'Arvo', serif;
@@ -7,6 +7,7 @@ body {
     animation: gradientBG 15s ease infinite;
     color: #333;
     overflow-x: hidden;
+    width: 100%;
     text-align: center;
 }
 
@@ -627,10 +628,10 @@ body {
         width: 150px; 
         height: 250px; 
     }
-    .photo-groom { left: -20px; }
-    .photo-bride { right: -20px; }
-    .animation-container.animate .photo-groom { left: 25px; }
-    .animation-container.animate .photo-bride { right: 25px; }
+    .photo-groom { left: 0px; }
+    .photo-bride { right: 0px; }
+    .animation-container.animate .photo-groom { left: 45px; }
+    .animation-container.animate .photo-bride { right: 45px; }
     
     /* Make floral corners much smaller on mobile, or hide some */
     .floral-corner {
