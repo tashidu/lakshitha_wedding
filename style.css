@@ -537,15 +537,17 @@ html, body {
 }
 
 .photo {
-    width: 220px;
-    height: 350px;
+    width: 45%; /* Fluid width */
+    max-width: 220px;
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 220/350; /* Keep the original height proportion */
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%) translateZ(40px); /* Center vertically and pop out */
     transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
     background: transparent;
     mix-blend-mode: darken;
-    transform: translateZ(40px);
 }
 
 .photo img {
@@ -556,11 +558,11 @@ html, body {
 }
 
 .photo-groom {
-    left: -70px;
+    left: 0; /* Align perfectly to the left edge of container */
 }
 
 .photo-bride {
-    right: -70px;
+    right: 0; /* Align perfectly to the right edge of container */
 }
 
 .btn-wrap {
@@ -608,11 +610,11 @@ html, body {
 
 /* Animation State */
 .animation-container.animate .photo-groom {
-    left: 45px; /* Bring them closer together */
+    transform: translate(25%, -50%) translateZ(40px); /* Slide in */
 }
 
 .animation-container.animate .photo-bride {
-    right: 45px; /* Bring them closer together */
+    transform: translate(-25%, -50%) translateZ(40px); /* Slide in */
 }
 
 .animation-container.animate .btn-wrap {
@@ -625,13 +627,10 @@ html, body {
         height: 250px; 
     }
     .photo { 
-        width: 150px; 
-        height: 250px; 
+        width: 45%; 
     }
-    .photo-groom { left: 0px; }
-    .photo-bride { right: 0px; }
-    .animation-container.animate .photo-groom { left: 45px; }
-    .animation-container.animate .photo-bride { right: 45px; }
+    .animation-container.animate .photo-groom { transform: translate(15%, -50%) translateZ(40px); }
+    .animation-container.animate .photo-bride { transform: translate(-15%, -50%) translateZ(40px); }
     
     /* Make floral corners much smaller on mobile, or hide some */
     .floral-corner {
