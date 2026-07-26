@@ -605,6 +605,11 @@ html, body {
     gap: 8px;
 }
 
+.open-btn span {
+    text-align: left;
+    line-height: 1.1;
+}
+
 .open-btn:hover {
     background: #7650a2;
     color: #fff;
@@ -661,5 +666,9 @@ html, body {
         font-size: 1.05em;
         gap: 5px;
         border-width: 1.5px;
+        border-radius: 25px;
+    }
+    .open-btn span {
+        line-height: 1.1;
     }
 }
