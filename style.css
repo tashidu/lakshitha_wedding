@@ -552,7 +552,7 @@ html, body {
 }
 
 .photo {
-    width: 32%; /* Reduced width so button doesn't overlap */
+    width: 38%; /* Slightly larger while keeping button clear */
     max-width: 220px;
     height: auto; /* Maintain aspect ratio */
     aspect-ratio: 220/350; /* Keep the original height proportion */
@@ -643,7 +643,7 @@ html, body {
         height: 250px; 
     }
     .photo { 
-        width: 28%; 
+        width: 35%; 
     }
     .animation-container.animate .photo-groom { left: 8%; }
     .animation-container.animate .photo-bride { right: 8%; }
