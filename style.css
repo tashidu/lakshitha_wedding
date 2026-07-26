@@ -552,7 +552,7 @@ html, body {
 }
 
 .photo {
-    width: 45%; /* Fluid width */
+    width: 32%; /* Reduced width so button doesn't overlap */
     max-width: 220px;
     height: auto; /* Maintain aspect ratio */
     aspect-ratio: 220/350; /* Keep the original height proportion */
@@ -603,11 +603,7 @@ html, body {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.open-btn span {
-    text-align: left;
-    line-height: 1.1;
+    white-space: nowrap;
 }
 
 .open-btn:hover {
@@ -647,7 +643,7 @@ html, body {
         height: 250px; 
     }
     .photo { 
-        width: 45%; 
+        width: 28%; 
     }
     .animation-container.animate .photo-groom { left: 8%; }
     .animation-container.animate .photo-bride { right: 8%; }
@@ -662,13 +658,11 @@ html, body {
     .floral-corner.bottom-right { bottom: -10px; right: -10px; }
     
     .open-btn {
-        padding: 5px 14px;
-        font-size: 1.05em;
+        padding: 5px 12px;
+        font-size: 0.95em;
         gap: 5px;
         border-width: 1.5px;
         border-radius: 25px;
-    }
-    .open-btn span {
-        line-height: 1.1;
+        white-space: nowrap;
     }
 }
