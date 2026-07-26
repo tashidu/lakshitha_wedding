@@ -583,7 +583,7 @@ html, body {
 .btn-wrap {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 35%; /* Moved upwards to sit between faces/shoulders */
     transform: translate(-50%, -50%);
     z-index: 10;
     transition: opacity 0.5s ease;
@@ -647,6 +647,10 @@ html, body {
     }
     .animation-container.animate .photo-groom { left: 8%; }
     .animation-container.animate .photo-bride { right: 8%; }
+    
+    .btn-wrap {
+        top: 35%;
+    }
     
     /* Make floral corners much smaller on mobile, or hide some */
     .floral-corner {
